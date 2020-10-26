@@ -1,4 +1,5 @@
 const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   mode: process.env.NODE_ENV,
@@ -8,11 +9,20 @@ module.exports = {
     filename: "build.js",
   },
   module: {
-    test: /\.(ts|tsx)$/,
-    use: [
+    rules: [
       {
-        loader: "ts-loader",
+        test: /\.(ts|tsx)$/,
+        use: [
+          {
+            loader: "ts-loader",
+          },
+        ],
+      },
+      {
+        test: /\.(css)$/,
+        use: ["style-loader", "css-loader"],
       },
     ],
   },
+  plugins: [new HtmlWebpackPlugin({ template: "./src/index.html" })],
 };
