@@ -28,5 +28,8 @@ module.exports = {
       },
     ],
   },
+  resolve: {
+    extensions: [".ts", ".js", ".tsx"],
+  },
   plugins: [new HtmlWebpackPlugin({ template: "./src/index.html" })],
 };
