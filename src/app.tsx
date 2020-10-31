@@ -7,12 +7,18 @@ export const generateHelloWorld = (): string => {
 };
 
 export const App: React.FC = () => {
+  const [isMounted, setMount] = React.useState<boolean>(false);
+  React.useEffect(() => {
+    setMount(true);
+  }, []);
   return (
-    <div>
-      <div>
-        {generateHelloWorld()}
-        <img src={Img}></img>
-      </div>
+    <div data-testid="text">
+      {isMounted && (
+        <div>
+          {generateHelloWorld()}
+          <img src={Img}></img>
+        </div>
+      )}
     </div>
   );
 };
