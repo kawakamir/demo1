@@ -2,8 +2,6 @@
   "name": "js-build-book-support",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/sadnessOjisan/js-build-book-support.git",
-  "author": "sadness_ojisan <sadness.ojisan@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.9.6",
