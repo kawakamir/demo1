@@ -1,13 +1,15 @@
 import * as React from "react";
-import Img from "./logo.png";
-import "./react.css";
+import Img from "./example.png";
+import "./reset.css";
 
-export const generateHelloWorld = (): string => {
+// テストしやすいようにわざと作った関数
+export const generateHelloWorld = () => {
   return "hello world.";
 };
 
-export const App: React.FC = () => {
-  const [isMounted, setMount] = React.useState<boolean>(false);
+export const App = () => {
+  // hooks周りはあとでreact-testing-libraryのテストをするので追加
+  const [isMounted, setMount] = React.useState(false);
   React.useEffect(() => {
     setMount(true);
   }, []);

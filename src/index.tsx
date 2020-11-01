@@ -1,11 +1,5 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import Img from "./logo.png";
-import "./reset.css";
+import { App } from "./app";
 
-ReactDOM.render(
-  <div>
-    hello world. <img src={Img}></img>
-  </div>,
-  document.getElementById("root")
-);
+ReactDOM.render(<App></App>, document.getElementById("root"));
